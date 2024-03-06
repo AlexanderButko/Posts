@@ -1,0 +1,94 @@
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.App{
+    width: 800px;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.navbar{
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: lightblue;
+}
+.navbar-items{
+    margin: auto;
+}
+.post{
+    display: flex;
+    border : 5px solid teal;
+    padding : 10px 10px 10px 10px;
+    margin-top : 10px;
+    margin-bottom : 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+h1.postTitle{
+    text-align: center;
+}
+
+.pagination{
+    display: flex;
+    margin-top : 10px;
+    margin-bottom : 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+.page{
+    padding: 10px;
+    border: 1px solid teal;
+    pointer: cursor;
+}
+.page-active{
+    padding: 10px;
+    border: 2px solid orange;
+    pointer: cursor;
+    font-weight: bold;
+}
+
+.page+.page, .page-active+.page{
+    margin-left: 2px;
+}
+.page+.page-active{
+    margin-right: 2px;
+}
+.post-button{
+    display: flex;
+    align-items: center;
+}
+.post-enter {
+    /*opacity: 0;*/
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
+}
+.post-enter-active {
+   /* opacity: 1;*/
+    /*transition: opacity 500ms ease-in;  по дефолту в бибилиотеке такая анимация, типо плавное появление айтэма*/
+    transform: translateX(0px);
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    /*opacity: 0;*/
+   /* transition: opacity 500ms ease-in; по дефолту в бибилиотеке такая анимация, типо плавное исчезновение айтэма*/
+    transform: translateX(-150px); /*заменили на такую анимацию - удаление поста "смахивает его влево на 150 пикселей"*/
+    transition: all 500ms ease-in;
+}
+
