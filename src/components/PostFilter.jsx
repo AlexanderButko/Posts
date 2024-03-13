@@ -8,7 +8,6 @@ const PostFilter = ({filter, setFilter}) => {
         <div>
             <MySelect
                 value={filter.fSelectedSort}
-                //changer={sortPost}
                 changer={selectedSort => setFilter({...filter, fSelectedSort: selectedSort})}
                 defaultOption = 'Сортировка по...'
                 options={[

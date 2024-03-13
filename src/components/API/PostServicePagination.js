@@ -1,16 +1,14 @@
 import axios from "axios";
 
-//Сервис загрузки постов
+
 export  default class PostServicePagination {
 
     static async getAll(limit = 10, page = 1){
-
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
                 params: {
                     _limit: limit,
                     _page: page
                 }
-
             } );
 
         return response;
@@ -18,7 +16,6 @@ export  default class PostServicePagination {
     static async getById(id) {
 
         const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/` + id);
-
         return response;
     }
 

@@ -73,13 +73,10 @@ h1.postTitle{
     align-items: center;
 }
 .post-enter {
-    /*opacity: 0;*/
     transform: translateX(-350px);
     transition: all 500ms ease-in;
 }
 .post-enter-active {
-   /* opacity: 1;*/
-    /*transition: opacity 500ms ease-in;  по дефолту в бибилиотеке такая анимация, типо плавное появление айтэма*/
     transform: translateX(0px);
     transition: all 500ms ease-in;
 }
@@ -87,9 +84,7 @@ h1.postTitle{
     opacity: 1;
 }
 .post-exit-active {
-    /*opacity: 0;*/
-   /* transition: opacity 500ms ease-in; по дефолту в бибилиотеке такая анимация, типо плавное исчезновение айтэма*/
-    transform: translateX(-150px); /*заменили на такую анимацию - удаление поста "смахивает его влево на 150 пикселей"*/
+    transform: translateX(-150px);
     transition: all 500ms ease-in;
 }
 
