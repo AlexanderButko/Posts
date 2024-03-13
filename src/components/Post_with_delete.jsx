@@ -3,7 +3,7 @@ import MyButton from "./UI/Button/MyButton";
 import {useNavigate} from "react-router-dom";
 
 function Post_with_delete(props) {
-    //В 6 версии библиотеки нет useHistory, вместо нее исп useNavigate
+
     const route = useNavigate();
     return (
         <div className = "post">
@@ -15,8 +15,6 @@ function Post_with_delete(props) {
                 <MyButton onClick = { () => props.remove(props.post)}>Delete post</MyButton>
                 <MyButton onClick = { () => route( `/posts/${props.post.id}`)}>Open post</MyButton>
             </div>
-           {/*13. Заменили на MyButton*/}
-
         </div>
     );
 }

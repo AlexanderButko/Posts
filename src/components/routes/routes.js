@@ -11,9 +11,9 @@ export function ProtectRouter() {
         {path: "/about", element: <About/>},
         {path: "/posts", element: <Posts/>},
         {path: "/posts/:id", element: <PostIdPage/>},
-       {path: "/", element: <Navigate replace to='/posts'/>},
-       {path: "/*", element: <Navigate replace to='/error'/>},
-       {path: "/login", element: <Navigate replace to='/posts'/>},
+        {path: "/", element: <Navigate replace to='/posts'/>},
+        {path: "/*", element: <Navigate replace to='/error'/>},
+        {path: "/login", element: <Navigate replace to='/posts'/>},
         {path: "/error", element: <Error/>}
     ]);
     return element;

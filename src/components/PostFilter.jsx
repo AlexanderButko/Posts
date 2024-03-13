@@ -8,7 +8,6 @@ const PostFilter = ({filter, setFilter}) => {
         <div>
             <MySelect
                 value={filter.fSelectedSort}
-                //changer={sortPost}
                 changer={selectedSort => setFilter({...filter, fSelectedSort: selectedSort})}
                 defaultOption = 'Сортировка по...'
                 options={[
@@ -18,7 +17,7 @@ const PostFilter = ({filter, setFilter}) => {
             />
             <MyInput
                 placeholder = 'Поиск...'
-                value={filter.fSearchQuery} //реализ управл инпут, двустороннее связывание
+                value={filter.fSearchQuery}
                 onChange={e => setFilter({...filter, fSearchQuery : e.target.value})}
             />
         </div>

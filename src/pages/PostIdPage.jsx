@@ -7,10 +7,7 @@ import Loader from "../components/UI/Loader/Loader";
 
 const PostIdPage = () => {
 
-
-
    const params = useParams();
-   //console.log(params);
    const [post, setPost] = useState({});
    const [comments,setComments] = useState([]);
 

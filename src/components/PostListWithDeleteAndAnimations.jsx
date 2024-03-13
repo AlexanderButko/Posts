@@ -2,7 +2,7 @@ import React from 'react';
 import Post_with_delete from "./Post_with_delete";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
-const PostListWithDeleteAndAnimations = ({posts, title, remove}) => { /*Добавили коллбэк remove к списку параметров PostList*/
+const PostListWithDeleteAndAnimations = ({posts, title, remove}) => {
     if (!posts.length){
         return ( <h1>Посты не найдены!</h1> );
     }
@@ -16,7 +16,7 @@ const PostListWithDeleteAndAnimations = ({posts, title, remove}) => { /*Доба
                         key = {post.id}
                         timeout={500}
                         classNames = "post"
-                    >{/* classNames - классовое имя для стилей в app.css (напр. post-enter-active*/}
+                    >
                         <Post_with_delete post={post} key = {post.id} remove={remove}/>
                     </CSSTransition>
                 )
